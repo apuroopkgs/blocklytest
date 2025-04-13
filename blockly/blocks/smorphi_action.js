@@ -38,7 +38,7 @@ goog.require('Blockly.Events');
   init: function() {
     this.appendValueInput("NAME")
         .setCheck("Number")
-        .appendField(new Blockly.FieldDropdown([["Move_Forward", "MoveForward"], ["Move_Backward", "MoveBackward"], ["Move_Right", "MoveRight"], ["Move_Left", "MoveLeft"], ["Rotate_Right", "CenterPivotRight"], ["Rotate_Left", "CenterPivotLeft"],["Diag_UpLeft", "MoveDiagUpLeft"],["Diag_UpRight", "MoveDiagUpRight"],["Diag_DownLeft", "MoveDiagDownLeft"],["Diag_DownRight", "MoveDiagDownRight"], ["Stop", "stopSmorphi"]]), "NAME");
+        .appendField(new Blockly.FieldDropdown([["Move_Forward", "MoveForward"], ["Move_Backward", "MoveBackward"], ["Move_Right", "MoveRight"], ["Move_Left", "MoveLeft"], ["Rotate_Right", "CenterPivotRight"], ["Rotate_Left", "CenterPivotLeft"],["Diag_UpLeft", "MoveDiagUpLeft"],["Diag_UpRight", "MoveDiagUpRight"],["Diag_DownLeft", "MoveDiagDownLeft"],["Diag_DownRight", "MoveDiagDownRight"]]), "NAME");
     this.setPreviousStatement(true, "String");
     this.setNextStatement(true, "String");
     this.setColour(20);
@@ -59,6 +59,32 @@ Blockly.Blocks['robot_shape'] = {
     this.setHelpUrl('http://www.example.com/');
   }
 };
+Blockly.Blocks['robot_get_shape'] = {
+  init: function() {
+    this.appendValueInput("NAME")
+        .setCheck("Number")
+        .appendField(new Blockly.FieldDropdown([["get I_shape", "sm.getShape() != 'i'"], ["get O_shape", "sm.getShape() != 'o'"], ["get L_shape", "sm.getShape() != 'l'"], ["get J_shape", "sm.getShape() != 'j'"], ["get T_shape", "sm.getShape() != 't'"], ["get S_shape", "sm.getShape() != 's'"], ["get Z_shape", "sm.getShape() != 'z'"]]), "NAME");
+    this.setOutput(true, null);
+    this.setColour(210);
+    this.setTooltip('');
+    this.setHelpUrl('http://www.example.com/');
+  }
+};
+
+
+// Blockly.Blocks['robot_get_shape'] = {
+//   init: function() {
+//     this.appendValueInput("NAME")
+//         .setCheck("Number")
+//         .appendField(new Blockly.FieldDropdown([["get I_shape", "sm.getShape() != 'i'"], ["get O_shape", "sm.getShape() != 'o'"], ["get L_shape", "sm.getShape() != 'l'"], ["get J_shape", "sm.getShape() != 'j'"], ["get T_shape", "sm.getShape() != 't'"], ["get S_shape", "sm.getShape() != 's'"], ["get Z_shape", "sm.getShape() != 'z'"]]), "NAME");
+//     this.setPreviousStatement(true, "String");
+//     this.setNextStatement(true, "String");
+//     this.setColour(20);
+//     this.setTooltip('');
+//     this.setHelpUrl('http://www.example.com/');
+//   }
+// };
+
 Blockly.Blocks['pixy_lights'] = {
   init: function() {
     this.appendValueInput("NAME")
@@ -74,7 +100,7 @@ Blockly.Blocks['pixy_lights'] = {
 Blockly.Blocks['sm_reset'] = {
   init: function() {
     this.appendValueInput()
-        .appendField(new Blockly.FieldDropdown([["sm_resetM1", "sm_reset_M1"], ["sm_resetM2", "sm_reset_M2"], ["sm_resetM3", "sm_reset_M3"], ["sm_resetM4", "sm_reset_M4"]]), "NAME");
+        .appendField(new Blockly.FieldDropdown([["sm_resetM1", "sm_reset_M1"], ["sm_resetM2", "sm_reset_M2"], ["sm_resetM3", "sm_reset_M3"], ["sm_resetM4", "sm_reset_M4"],]), "NAME");
     this.setPreviousStatement(true, "String");
     this.setNextStatement(true, "String");
     this.setColour(20);
@@ -82,6 +108,23 @@ Blockly.Blocks['sm_reset'] = {
     this.setHelpUrl('http://www.example.com/');
   }
 };
+
+Blockly.Blocks['husky_function'] = {
+  init: function() {
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
+
+
+
+
+
+
 Blockly.Blocks.smorphi_action.HUE = 330;
 
 Blockly.Blocks['motion_set_type'] = {

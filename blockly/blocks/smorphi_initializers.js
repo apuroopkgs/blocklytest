@@ -58,7 +58,55 @@ Blockly.Blocks['smorphi_function_initializer'] = {
     return true;
   }
 };
+//single setup-looop
+Blockly.Blocks['smorphi_single_initializer'] = {
+  /**
+   * Block for defining the single Smorphi setup() and loop() functions.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Smorphi_single-Setup");
+    this.appendStatementInput('SINGLE_SETUP_FUNC')
+        .setCheck(null);  // Allows any type of statements inside
+    this.appendDummyInput()
+        .appendField("Smorphi_single-Loop");
+    this.appendStatementInput('SINGLE_LOOP_FUNC')
+        .setCheck(null);  // Allows loop-related statements
+    this.setInputsInline(false);
+    this.setPreviousStatement(true, null);  // Can connect to a block above
+    this.setNextStatement(true, null);      // Can connect to a block below
+    this.setColour(Blockly.Blocks.procedures.HUE);  // Assign block color
+    this.setTooltip('Initializes single setup and loop for Smorphi.');
+    this.setHelpUrl('https://arduino.cc/en/Reference/Setup');
+    this.contextMenu = false;
+  }
+};
 
+
+
+
+// Blockly.Blocks['smorphi_single_function_initializer'] = {
+  
+//   init: function() {
+//     this.appendDummyInput()
+//         .appendField("Smorphi_single-Setup");
+//     this.appendStatementInput('SETUP_FUNC');
+//     this.appendDummyInput()
+//         .appendField("Smorphi_single-Loop");
+//     this.appendStatementInput('LOOP_FUNC');
+//     this.setInputsInline(false);
+//     this.setColour(Blockly.Blocks.procedures.HUE);
+//     this.setTooltip(Blockly.Msg.ARD_FUN_RUN_TIP);
+//     this.setHelpUrl('https://arduino.cc/en/Reference/Loop');
+//     this.contextMenu = false;
+//   },
+//   /** @return {!boolean} True if the block instance is in the workspace. */
+//   getArduinoLoopsInstance: function() {
+//     return true;
+//   }
+// };
+////
  Blockly.Blocks['initialize_smorphi'] = {
     /**
    * Block for if/elseif/else condition.
@@ -67,12 +115,68 @@ Blockly.Blocks['smorphi_function_initializer'] = {
   init: function() {
     this.setHelpUrl('http://www.example.com/');
     this.setColour(120);
+    // nithul edit
     this.appendDummyInput()
         .appendField("Initialize Smorphi");
+    // this.appendDummyInput()
+    // .appendField(new Blockly.FieldDropdown([["Initialize-Smorphi","'smorphi'"],["Initialize-Smorphi_single","'smorphi_single"]]),"NAME");
+    // //
+
     this.setNextStatement(true, "null");
     this.setTooltip('');
   }
 };
+
+//smorphi single intialization
+Blockly.Blocks['initialize_smorphi_single'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Initialize Smorphi_single");
+    this.setColour(120);
+    this.setNextStatement(true, "null");
+    this.setTooltip("smorphi_single");
+    this.setHelpUrl("");
+  }
+};
+// Blockly.Blocks['initialize_smorphi_single'] = {
+//   /**
+//  * Block for initialization of smorphi_single
+//  * @this Blockly.Block
+//  */
+//   init: function() {
+//     this.setHelpUrl('http://www.example.com/');
+//     this.setColour(120);
+//     this.appendDummyInput()
+//         .appendField("Initialize Smorphi_single");
+ 
+//     this.setNextStatement(true, "null");
+//     this.setTooltip('');
+//   }
+// };
+
+// Ultra sonic sensor
+Blockly.Blocks['initialize_ultrasonic'] = {
+  /**
+ * Block for if/elseif/else condition.
+ * @this Blockly.Block
+ */
+init: function() {
+  this.setHelpUrl('http://www.example.com/');
+  this.setColour(120);
+  // nithul edit
+  this.appendDummyInput()
+      .appendField("Initialize Ultrasonic Sensor");
+  // this.appendDummyInput()
+  // .appendField(new Blockly.FieldDropdown([["Initialize-Smorphi","'smorphi'"],["Initialize-Smorphi_single","'smorphi_single"]]),"NAME");
+  // //
+
+  this.setNextStatement(true, "null");
+  this.setTooltip('');
+}
+};
+
+///
+
 Blockly.Blocks['initialize_bluetooth'] = {
   /**
  * Block for if/elseif/else condition.
@@ -104,19 +208,61 @@ init: function() {
   this.setTooltip('');
 }
 };
+Blockly.Blocks['initialize_huskylens'] = {
+//   /**
+//  * Block for if/elseif/else condition.
+//  * @this Blockly.Block
+//  */
+  init: function() {
+    this.setHelpUrl('http://www.example.com/');
+    this.setColour(120);
+    this.appendDummyInput()
+        .appendField("Initialize Husky Lens");
+    this.setPreviousStatement(true, "null");
+    this.setNextStatement(true, "null");
+    this.setTooltip('');
+}
+};
+
+
+
+
+
+
+
+//husky lens initialization
+// Blockly.Blocks['initialize_huskylens'] = {
+//   /**
+//  * Block for if/elseif/else condition.
+//  * @this Blockly.Block
+//  */
+  
+//   init: function(){
+//     this.setColour(120);
+//     this.appendDummyInput()
+//         .appendField("Initialize Husky_Lens");
+//     this.setPreviousStatement(true, "null");
+//     this.setNextStatement(true, "null");
+//     this.setTooltip('');
+
+//   }
+
+// };
+
+
 Blockly.Blocks['initialize_humidity_sensor'] = {
   /**
  * Block for if/elseif/else condition.
  * @this Blockly.Block
  */
-init: function() {
-  this.setHelpUrl('http://www.example.com/');
-  this.setColour(120);
-  this.appendDummyInput()
-      .appendField("Initialize Humidity_Sensor");
-  this.setPreviousStatement(true, "null");
-  this.setNextStatement(true, "null");
-  this.setTooltip('');
+  init: function() {
+    this.setHelpUrl('http://www.example.com/');
+    this.setColour(120);
+    this.appendDummyInput()
+        .appendField("Initialize Humidity_Sensor");
+    this.setPreviousStatement(true, "null");
+    this.setNextStatement(true, "null");
+    this.setTooltip('');
 }
 };
 Blockly.Blocks['initialize_temp_sensors'] = {
@@ -255,3 +401,71 @@ Blockly.Blocks['rear_ir'] = {
     this.setHelpUrl('http://www.example.com/');
   }
 };
+Blockly.Blocks['bottom_left_ir'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Bottom_Left_IR")
+        .appendField(new Blockly.FieldTextInput("module_num"), "module_num")
+        .appendField(new Blockly.FieldTextInput("status_num"), "status_num");
+    this.setInputsInline(false);
+    this.setPreviousStatement(true, "String");
+    this.setNextStatement(true, "String");
+    this.setColour(210);
+    this.setTooltip('');
+    this.setHelpUrl('http://www.example.com/');
+  }
+};
+Blockly.Blocks['bottom_right_ir'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Bottom_Right_IR")
+        .appendField(new Blockly.FieldTextInput("module_num"), "module_num")
+        .appendField(new Blockly.FieldTextInput("status_num"), "status_num");
+    this.setInputsInline(false);
+    this.setPreviousStatement(true, "String");
+    this.setNextStatement(true, "String");
+    this.setColour(210);
+    this.setTooltip('');
+    this.setHelpUrl('http://www.example.com/');
+  }
+};
+
+Blockly.Blocks['read_husky'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Read Husky")        
+    this.setInputsInline(false);
+    this.setPreviousStatement(true, "String");
+    this.setNextStatement(true, "String");
+    this.setColour(210);
+    this.setTooltip('');
+    this.setHelpUrl('http://www.example.com/');
+  }
+};
+Blockly.Blocks['end_husky_loop'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("end_husky_loop")        
+    this.setInputsInline(false);
+    this.setPreviousStatement(true, "String");
+    this.setNextStatement(true, "String");
+    this.setColour(210);
+    this.setTooltip('');
+    this.setHelpUrl('http://www.example.com/');
+  }
+};
+Blockly.Blocks['end_ultrasonic_loop'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("End Ultrasoinc Sensor Loop")        
+    this.setInputsInline(false);
+    this.setPreviousStatement(true, "String");
+    this.setNextStatement(true, "String");
+    this.setColour(210);
+    this.setTooltip('');
+    this.setHelpUrl('http://www.example.com/');
+  }
+};
+
+
+

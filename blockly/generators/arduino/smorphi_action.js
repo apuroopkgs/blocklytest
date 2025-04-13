@@ -26,6 +26,15 @@ Blockly.Arduino['robot_shape'] = function(block) {
   var code = 'my_robot.'+dropdown_name+'();\n';
   return code;
 };
+// Blockly.Arduino['robot_get_shape'] = function(block) {
+//   var dropdown_name = block.getFieldValue('NAME');
+//   //var value_name = Blockly.Arduino.valueToCode(block, 'NAME', Blockly.Arduino.ORDER_ATOMIC);
+//   // TODO: Assemble Arduino into code variable.
+//   var code = 'my_robot.'+dropdown_name+'();\n';
+//   return code;
+// };
+
+
 Blockly.Arduino['pixy_lights'] = function(block) {
   var dropdown_name = block.getFieldValue('NAME');
   var value_name = Blockly.Arduino.valueToCode(block, 'NAME', Blockly.Arduino.ORDER_ATOMIC);
@@ -40,6 +49,31 @@ Blockly.Arduino['sm_reset'] = function(block) {
   var code = 'my_robot.'+dropdown_name+'();\n';
   return code;
 };
+/////////
+Blockly.Arduino['husky_function'] = function(block) {
+  // TODO: Assemble Arduino into code variable.
+  var code = 'if (result.command == COMMAND_RETURN_BLOCK){\n'+'Serial.println(result.ID);\n'+'}'+
+             'else if (result.command == COMMAND_RETURN_ARROW){\n'+'Serial.println("Wrong mode");\n'+'}\n'+
+             'else{\n'+'Serial.println("Object unknown!");\n'+'}\n';
+  return code;
+};
+
+
+
+////////
+// Blockly.Arduino['Husky_Function'] = function(block) {
+//   var dropdown_name = block.getFieldValue('NAME');
+//   var value_name = Blockly.Arduino.valueToCode(block, 'NAME', Blockly.Arduino.ORDER_ATOMIC);
+//   // TODO: Assemble Arduino into code variable.
+//   var code = 'if (result.command == COMMAND_RETURN_BLOCK){\n'+'Serial.println(result.ID);\n'+'}'+
+//              'else if (result.command == COMMAND_RETURN_ARROW){\n'+'Serial.println("Wrong mode");\n'+'}\n'+
+//              'else{\n'+'Serial.println("Object unknown!");\n'+'}\n';
+//   return code;
+// };
+
+
+
+
 Blockly.Arduino['motion_set_type'] = function(block) {
   var argument0 = Blockly.Arduino.valueToCode(block, 'VALUE',
       Blockly.Arduino.ORDER_ASSIGNMENT) || '0';

@@ -120,3 +120,105 @@ Blockly.Blocks['color_status'] = {
     this.setHelpUrl('http://www.example.com/');
   }
 };
+Blockly.Blocks['huskylens_available'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("huskylens_available");
+    this.setOutput(true, null);
+    this.setColour(210);
+    this.setTooltip('');
+    this.setHelpUrl('http://www.example.com/');
+  }
+};
+/// ultrasonic distance cm
+Blockly.Blocks['ultrasonic_distance'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Ultrasonic Sensor Distance");
+    this.setOutput(true, null);
+    this.setColour(210);
+    this.setTooltip('');
+    this.setHelpUrl('http://www.example.com/');
+  }
+};
+
+
+// Blockly.Blocks['robot_get_shape'] = {
+//   init: function() {
+//     this.appendDummyInput()
+//         .appendField("get_shape_of_robot");
+//     this.setOutput(true, null);
+//     this.setColour(210);
+//     this.setTooltip('');
+//     this.setHelpUrl('http://www.example.com/');
+//   }
+  
+// };
+
+
+// Blockly.Blocks['robot_get_shape'] = {
+//   init: function() {
+//     this.appendValueInput("NAME")
+//         .setCheck("Number")
+//         .appendField(new Blockly.FieldDropdown([["get I_shape", "sm.getShape() != 'i'"], ["get O_shape", "sm.getShape() != 'o'"], ["get L_shape", "sm.getShape() != 'l'"], ["get J_shape", "sm.getShape() != 'j'"], ["get T_shape", "sm.getShape() != 't'"], ["get S_shape", "sm.getShape() != 's'"], ["get Z_shape", "sm.getShape() != 'z'"]]), "NAME");
+//     this.setOutput(true, null);
+//     this.setColour(210);
+//     this.setTooltip('');
+//     this.setHelpUrl('http://www.example.com/');
+//   }
+// };
+// Blockly.Blocks['robot_get_shape_for_husky'] = {
+//   init: function() {
+//     this.appendValueInput("NAME")
+//         .setCheck("Number")
+//         .appendField(new Blockly.FieldDropdown([["husky_lens get I_shape", "(result.command == COMMAND_RETURN_BLOCK) && (my_robot.sm_getShape() != 'i')"], ["husky_lens get O_shape", "(result.command == COMMAND_RETURN_BLOCK) && (my_robot.sm_getShape() != 'o')"], ["husky_lens get L_shape", "(result.command == COMMAND_RETURN_BLOCK) && (my_robot.sm_getShape() != 'l')"], ["husky_lens get J_shape", "(result.command == COMMAND_RETURN_BLOCK) && (my_robot.sm_getShape() != 'j')"], ["husky_lens get T_shape", "(result.command == COMMAND_RETURN_BLOCK) && (my_robot.sm_getShape() != 't')"], ["husky_lens get S_shape", "(result.command == COMMAND_RETURN_BLOCK) && (my_robot.sm_getShape() != 's')"], ["husky_lens get Z_shape", "(result.command == COMMAND_RETURN_BLOCK) && (my_robot.sm_getShape() != 'z')"]]), "NAME");
+//     this.setOutput(true, null);
+//     this.setColour(210);
+//     this.setTooltip('');
+//     this.setHelpUrl('http://www.example.com/');
+//   }
+// };
+Blockly.Blocks['available_shapes'] = {
+  init: function() {
+    this.appendValueInput("NAME")
+        .setCheck(null)
+        .appendField(new Blockly.FieldDropdown([["I_shape", "'i'"], ["O_shape", "'o'"], ["L_shape", "'l'"], ["J_shape", "'j'"], ["T_shape", "'t'"], ["S_shape", "'s'"], ["Z_shape", "'z'"]]), "NAME");
+    this.setOutput(true, null);
+    this.setColour(210);
+    this.setTooltip('');
+    this.setHelpUrl('http://www.example.com/');
+  }
+};
+
+Blockly.Blocks['color_ID'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Color ID");
+    this.setOutput(true, null);
+    this.setColour(210);
+    this.setTooltip('');
+    this.setHelpUrl('http://www.example.com/');
+  }
+};
+Blockly.Blocks['command_return_block'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Husky-COMMAND RETURN BLOCK");
+    this.setOutput(true, null);
+    this.setColour(210);
+    this.setTooltip('');
+    this.setHelpUrl('http://www.example.com/');
+  }
+};
+Blockly.Blocks['command_return_arrow'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Husky-COMMAND RETURN ARROW");
+    this.setOutput(true, null);
+    this.setColour(210);
+    this.setTooltip('');
+    this.setHelpUrl('http://www.example.com/');
+  }
+};
+
+

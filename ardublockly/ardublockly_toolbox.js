@@ -14,9 +14,13 @@ Ardublockly.TOOLBOX_XML =
 '  <sep></sep>' +
 '  <category id="catSmorphi_initializers" name="Smorphi_Init">' +
 '    <block type="smorphi_function_initializer"></block>' +
+'    <block type="smorphi_single_initializer"></block>' +
 '    <block type="initialize_smorphi"></block>' +
+'    <block type="initialize_smorphi_single"></block>' +
+'    <block type="initialize_ultrasonic"></block>'+
 '    <block type="initialize_bluetooth"></block>' +
 '    <block type="initialize_pixycam"></block>' +
+'    <block type="initialize_huskylens"></block>' +
 '    <block type="initialize_humidity_sensor"></block>' +
 '    <block type="initialize_temp_sensors"></block>' +
 '    <block type="number_input"></block>' +
@@ -25,6 +29,12 @@ Ardublockly.TOOLBOX_XML =
 '    <block type="left_ir"></block>'+
 '    <block type="front_ir"></block>'+
 '    <block type="rear_ir"></block>'+
+'    <block type="bottom_left_ir"></block>'+
+'    <block type="bottom_right_ir"></block>'+
+
+'    <block type="read_husky"></block>'+
+'    <block type="end_husky_loop"></block>'+
+'    <block type="end_ultrasonic_loop"></block>'+
 '  </category>' +
 '  <sep></sep>' +
 '  <category id="catSmorphi_variables" name="Smorphi_Variables">' +
@@ -37,6 +47,14 @@ Ardublockly.TOOLBOX_XML =
 '    <block type="rear_sensor_status"></block>' +
 '    <block type="shape_status"></block>' +
 '    <block type="color_status"></block>' +
+'    <block type="huskylens_available"></block>' +
+// '    <block type="robot_get_shape"></block>' +
+// '    <block type="robot_get_shape_for_husky"></block>' +
+'    <block type="ultrasonic_distance"></block>' +
+'    <block type="available_shapes"></block>' +
+'    <block type="color_ID"></block>' +
+'    <block type="command_return_block"></block>' +
+'    <block type="command_return_arrow"></block>' +
 '  </category>' +
 '  <sep></sep>' +
 '  <category id="catSmorphi_action" name="Smorphi_Actions">' +
@@ -44,6 +62,7 @@ Ardublockly.TOOLBOX_XML =
 '    <block type="robot_shape"></block>' +
 '    <block type="pixy_lights"></block>' +
 '    <block type="sm_reset"></block>' +
+'    <block type="husky_function"></block>' +
 '    <block type="motion_set_type"></block>' +
 '    <block type="smorphi_time_delay"></block>' +
 '  </category>' +
